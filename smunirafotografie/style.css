@@ -1,0 +1,453 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(237, 224, 212); /* Beige background */
+    font-family: 'Forum', serif;
+    color:rgb(0, 0, 0);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: rgb(237, 224, 212, 0.5);  Beige background */
+    background-color:#b7b7a4c0;
+    padding: 20px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box; /* Ensures padding is included in total width */
+}
+
+.menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.menu a:hover {
+    /*color: green;*/
+    color:#a65305
+}
+
+
+.logo img {
+    /* This is perfect, don't change */
+    width: 100px;  
+    height: auto; 
+    vertical-align: middle;
+    position: absolute;
+    left: 20px; /* adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.social-media {
+    text-decoration: none;
+}
+
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu-links {
+        display: none;
+        position: fixed; /* Changed from absolute to fixed */
+        top: 60px; /* Adjust this value based on the height of your menu bar */
+        width: 100%; /* Ensure it spans the full width */
+        /*background-color: rgba(209, 121, 39, 0.894);*/
+        background-color:#b7b7a4c0;
+        box-sizing: border-box;
+        padding: 20px; /* Add padding to ensure content isn't touching screen edges */
+        text-align: center;
+    }
+
+    .menu-links a {
+        display: block;
+        margin: 10px 0;
+        /* Ensure text fits comfortably within viewport */
+        font-size: 16px; /* Adjust font size for mobile view */
+    }
+
+    /* These two sections are for the Portrait Page image structure */
+    .row {
+        flex-direction: column;
+    }
+
+    .image-container {
+        width: 100%; /* Full width for smaller screens */
+        padding: 10px 0; /* Adjust padding as needed */
+    }
+
+
+    /* These  sections are for the Packages Page  structure in mobile phones*/
+    .packages {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .package {
+        width: 100%; /* Adjust for mobile */
+        margin-bottom: 20px; /* Space between packages */
+        border-bottom: 2px solid black; /* Black line separator */
+        padding-bottom: 20px; /* Padding above the separator line */
+    }
+    
+    .package ul {
+        text-align: right;
+        align-items: right;
+        padding-left: 5px; /* Reduced padding for <ul> */
+        padding-right: 5px; /* Add this if you need padding on the right as well */
+    
+    }
+    /* Remove the border from the last package to avoid a line at the very bottom */
+    .package:last-child {
+        border-bottom: none;
+    }
+
+    /* Reviews Page */
+    .reviewMain {
+        margin-top: 30px;
+    }   
+    .reviews-header h1, .reviews-header h2, .reviews-header h3 {
+        font-size: 1.5em; /* Adjust font size for headings */
+        
+    }
+
+    .review {
+        margin: 15px 10px; /* Adjust margins for smaller screens */
+        font-size: 1em; /* Adjust font size for review text */
+        padding-top: 20px; /* Adjust this value based on the height of your menu bar */
+    }
+
+    /* Simplify animations on mobile or remove them if they feel too much */
+    .review.left, .review.right {
+        animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+}
+
+/* Add a class for when the menu is active */
+.menu-links.active {
+    display: block;
+}
+
+.social-media i {
+    color: rgb(255, 255, 255); /* Icon color */
+    font-size: 20px; /* Icon size */
+}
+
+.social-media i:hover {
+    /*color: green;  Icon color on hover */
+    color:rgb(183, 94, 10)
+}
+
+/*Home Page CSS*/
+.landing-page {
+    background-image: url('landingImage.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* or any color that contrasts with your image */
+}
+
+/*Portfolio Page CSS*/
+
+.bodyWebPage{
+   margin-top: 10px;
+   color: rgb(1, 1, 1);
+
+}
+.portfolio {
+    text-align: center;
+    padding: 70px;
+}
+
+.portfolio-heading {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+    
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    width: 50%; /* Adjust as needed */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden; /* Ensures the overlay stays within the container */
+    padding: 20px;
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0); /* Transparent overlay initially */
+    transition: background-color 0.5s ease;
+}
+
+.image-container:hover::before {
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay on hover */
+}
+
+
+.image-container img {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.image-label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    /* font-weight: bold; */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for label */
+    padding: 7px;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+
+
+/* Let's Meet Page */
+.contact-form h2 {
+    font-family: 'Forum', serif;
+    font-weight: bold;
+    padding: 20px; 
+    text-align: center; 
+    font-size: 3em;
+    margin-top: 60px;
+}
+.contact-form {
+    font-family: 'Didact Gothic', sans-serif;
+    color: black;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 80px; /* Centering the button */
+}
+
+.contact-form form {
+    background-color: transparent; /* Same as page background */
+    border-bottom: 2px solid black; /* Black underline */
+}
+/* Remove the border from the last package to avoid a line at the very bottom */
+.contact-form form:last-child {
+        border-bottom: none;
+}
+.contact-form label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid black; /* Black underline for input fields */
+    background-color: transparent; /* Same as page background */
+}
+
+.contact-form button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px; /* Rounded shape */
+    background-color: rgb(166, 83, 5); /* Specified color */
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centering the button */
+    border-radius: 20px; /* Rounded shape */
+    width: 50%; /* Adjust as needed */
+    margin: 20px auto; /* Center button */
+}
+
+.contact-form button:hover {
+    background-color: rgb(208, 116, 31); /* Slightly lighter color on hover */
+}
+
+
+.contact-form input, .contact-form select, .contact-form textarea {
+    /* ... existing styles ... */
+    background-color: rgb(237, 224, 212); /* Beige background */
+    /* ... other existing styles ... */
+}
+
+/* Reinforcing the background color for valid input */
+.contact-form input:valid, 
+.contact-form select:valid, 
+.contact-form textarea:valid {
+    background-color: rgb(237, 224, 212); /* Beige background */
+}
+
+
+
+
+/* Packages Webpage */
+
+.packages {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px;
+}
+
+.package {
+    width: 20%; 
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This aligns the price at the bottom */
+    height: 100%; /* Ensure each package has the same height */
+}
+.package .content {
+    flex: 1; /* This makes the content grow to occupy available space */
+    display: flex;
+    flex-direction: column;
+}
+
+.package h2 {
+    font-family: 'Forum', serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5em; 
+}
+
+.package ul {
+    list-style-type: disc; /* This will add bullet points */
+    padding: 15px;
+    font-family: 'Didact Gothic', sans-serif;
+    text-align: middle;   
+    
+}
+
+.package ul li {
+    margin-bottom: 10px; /* Adds space below each list item */
+}
+.price {
+    font-size: 1.8em; 
+    font-family: 'Forum', serif;
+    text-align: center;
+    flex-direction: row;
+}
+
+.additional-info {
+    text-align: center;
+    font-family: 'Didact Gothic', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 120px;
+}
+
+
+
+/* Reviews Page */
+
+.reviewMain {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+}
+
+.reviews-header {
+    text-align: center;
+    margin-bottom: 50px;
+    
+}
+
+.review {
+    opacity: 0; /* Initially hidden */
+    margin: 40px;
+    font-family: 'Didact Gothic', sans-serif;
+    transition: opacity 1s ease-out;
+}
+
+.review.left {
+    animation: slideFromLeft 1s forwards;
+    text-align: left;
+}
+
+.review.right {
+    animation: slideFromRight 1s forwards;
+    text-align: right;
+}
+
+@keyframes slideFromLeft {
+    from {transform: translateX(-50px); opacity: 0;}
+    to {transform: translateX(0); opacity: 1;}
+}
+
+@keyframes slideFromRight {
+    from {transform: translateX(50px); opacity: 0;}
+    to {transform: translateX(0); opacity: 1;}
+}
+
+
+/* Footer */
+footer {
+    background-color: #6b705c; /* Your specified color */
+    color: white; /* Adjust text color as needed */
+    text-align: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 0.8em; /* Adjust font size as needed */
+    position: fixed;
+    width:100%;
+    left: 0;
+    bottom: 0;
+}
+
+footer a {
+    color: white; /* Link color */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
