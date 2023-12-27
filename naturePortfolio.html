@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>smunirafotografie – capturing life!</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Large Screen Navigation Bar -->
+    <nav class="menu">
+      <a href="index.html" class="logo">
+        <img src="Logo for website dev..svg" alt="smunirafotografie logo" />
+      </a>
+      <div class="menu-links">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="packages.html">Packages</a>
+        <a href="meet.html">Let's Meet</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="about.html">About</a>
+        <a
+          href="https://www.instagram.com/smunirafotografie/"
+          target="_blank"
+          class="social-media"
+        >
+          <i class="fab fa-instagram"></i
+        ></a>
+        <a href="mailto:smunirafotografie@gmail.com" class="social-media"
+          ><i class="fas fa-envelope"></i
+        ></a>
+      </div>
+
+      <!-- Small Screen Navigation Bar -->
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+
+
+
+    <div class="gallery">
+      <div class = "gallery-row">
+          <!-- Column 1: Portrait Image -->
+        <div class="gallery-column">
+            <div class="gallery-item large portrait">
+                <img src="LifeStyleCoverWomenwDogs.jpg" alt="Portrait Image" class="portrait">
+            </div>
+        </div>
+
+        <!-- Column 2: Two Landscape Images -->
+        <div class="gallery-column">
+            <div class="gallery-item small landscape-stack">
+                <img src="LifeStyleCoverKidbyTheOcean.jpg" alt="Landscape Image 1" class="landscape">
+            </div>
+            <div class="gallery-item small landscape-stack">
+                <img src="LifeStyleCoverKidbyTheOcean.jpg" alt="Landscape Image 2" class="landscape">
+            </div>
+        </div>
+    </div>
+    <div class = "gallery-row">
+          <!-- Column 1: Portrait Image -->
+          <div class="gallery-column">
+            <div class="gallery-item large landscape">
+              <img src="LifeStyleCoverKidbyTheOcean.jpg" alt="Large Landscape Image" class="landscape">
+            </div>
+          </div>
+
+        <!-- Column 2: Two Landscape Images -->
+        <div class="gallery-column">
+            <div class="gallery-item small portrait-and-landscape-stack">
+                
+                <img src="LifeStyleCoverWomenwDogs.jpg" alt="Small Portrait Image" class="portrait">
+            </div>
+            <div class="gallery-item small landscape-stack">
+                <img src="LifeStyleCoverKidbyTheOcean.jpg" alt="Small Landscape Image" class="landscape">
+            </div>
+        </div>
+    </div>
+
+      
+    <!-- More rows follow the same pattern... -->
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  <footer>
+    <p>All copyright content © 2023 Sirajum Munira</p>
+    <p>
+      Website developed by <a href="mailto:mm10294@nyu.edu">Maisha Mahrin</a>
+    </p>
+  </footer>
+</html>
+
+
+
+
+
