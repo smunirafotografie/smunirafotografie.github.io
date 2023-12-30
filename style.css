@@ -515,10 +515,9 @@ footer a:hover {
     .packages {
         flex-direction: column; /* Stack the .package divs vertically */
         align-items: center;
-        margin: 5px;
+        margin: 15px;
         flex-wrap: wrap; /* Allows items to wrap onto the next line */
         padding: 10px;
-
 
     }
 
