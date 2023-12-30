@@ -348,31 +348,24 @@ body, html {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-left: 2%;
-    margin-right:2%;
+    margin-left: 10%;
+    margin-right:10%;
     margin-top: 15%;
-    margin-bottom: 10%;
+    margin-bottom: 15%;
 }
 
-.gallery-row {
+.gallery .row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px; /* Space between rows */
+    margin-bottom: 20px; /* Adjust space between rows */
 }
 
-.gallery-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0 10px; /* Space between columns */
-}
-
+/* We need this section to keep the images inside their respective boxes */
 .gallery-item {
     margin: 5px;
     overflow: hidden;
     position: relative;
-    padding: 5px; /* Padding between images */
+    padding: 10px; /* Padding between images */
 }
 
 .gallery-item img {
@@ -393,18 +386,29 @@ body, html {
 .landscape {
     aspect-ratio: 5500 / 4000; /* Maintain aspect ratio */
 }
+.big-landscape {
+    width: 100%;
+    height: auto;
+}
 
-.gallery-item.large.portrait {
-    flex: 0 0 60%; /* 60% of the container width */
+.gallery-item.small.portrait {
+    flex: 0 0 28%; /* 28% of the container width */
 }
 
 .gallery-item.large.landscape {
     flex: 0 0 80%; /* 80% of the container width */
 }
 
-.gallery-item.small.landscape-stack,
+.gallery-item.small.landscape-stack{
+    flex: 0 0 60%; /* 35% of the container width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between the small images */
+
+}
+
 .gallery-item.small.portrait-and-landscape-stack {
-    flex: 0 0 35%; /* 35% of the container width */
+    flex: 0 0 45%; /* 45% of the container width */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Space between the small images */
@@ -600,6 +604,6 @@ footer a:hover {
         flex-wrap: nowrap; /* Prevent wrapping on large screens */
     }
     .package {
-        width: 25%; /* Original width for large screens */
+        width: 22%; /* Original width for large screens */
     }
 }
