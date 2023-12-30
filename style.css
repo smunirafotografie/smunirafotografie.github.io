@@ -63,124 +63,6 @@ body, html {
     background-color: #ffffff;
 }
 
-@media screen and (max-width: 768px) {
-    .hamburger-menu {
-        display: block;
-    }
-
-    .menu-links {
-        display: none;
-        position: fixed; /* Changed from absolute to fixed */
-        top: 60px; /* Adjust this value based on the height of your menu bar */
-        width: 100%; /* Ensure it spans the full width */
-        /*background-color: rgba(209, 121, 39, 0.894);*/
-        background-color:#b7b7a4c0;
-        box-sizing: border-box;
-        padding: 20px; /* Add padding to ensure content isn't touching screen edges */
-        text-align: center;
-    }
-
-    .menu-links a {
-        display: block;
-        margin: 10px 0;
-        /* Ensure text fits comfortably within viewport */
-        font-size: 16px; /* Adjust font size for mobile view */
-    }
-
-    /* These two sections are for the Portrait Page image structure */
-    .row {
-        flex-direction: column;
-    }
-
-    .image-container {
-        width: 100%; /* Full width for smaller screens */
-        padding: 10px 0; /* Adjust padding as needed */
-    }
-
-
-    /* These  sections are for the Packages Page  structure in mobile phones*/
-    .packages {
-        flex-direction: column; /* Stack the .package divs vertically */
-        align-items: center;
-        margin: 5px;
-        flex-wrap: wrap; /* Allows items to wrap onto the next line */
-        justify-content: space-around;
-        padding: 10px;
-
-    }
-
-    .package {
-        border-bottom: 2px solid black; /* Black line separator */
-        padding-bottom: 15px; /* Padding above the separator line */
-        width: auto; /* Let each package take full width */
-        margin: 15px 0; /* Add some vertical margin for separation */
-        padding: 15px; /* Balanced padding inside each package */
-        box-sizing: border-box; /* Include padding and border in the width */
-    }
-    .package .content, .package .price {
-        text-align: center; /* Center-align the content for readability */
-    }
-    .package ul {
-        text-align: right;
-        align-items: right;
-        /*padding-left: 5px;  /*Reduced padding for <ul> */
-        /*padding-right: 5px; /* Add this if you need padding on the right as well */
-        padding: 0 10px; /* Adjust padding for list */
-        list-style-position: inside; /* Position bullets inside */
-    }
-
-
-    .package ul li {
-        margin-bottom: 15px; /* Increase space between bullet points */
-        text-align: center; /* Align text to left for better readability */
-    }
-
-    /* Remove the border from the last package to avoid a line at the very bottom */
-    .package:last-child {
-        border-bottom: none;
-    }
-
-    /* Reviews Page */
-    .reviewMain {
-        margin-top: 30px;
-    }   
-    .reviews-header h1, .reviews-header h2, .reviews-header h3 {
-        font-size: 1.5em; /* Adjust font size for headings */
-        
-    }
-
-    .review {
-        margin: 15px 10px; /* Adjust margins for smaller screens */
-        font-size: 1em; /* Adjust font size for review text */
-        padding-top: 20px; /* Adjust this value based on the height of your menu bar */
-    }
-
-    /* Simplify animations on mobile or remove them if they feel too much */
-    .review.left, .review.right {
-        animation: fadeIn 1s forwards;
-    }
-
-    @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
-    }
-    /* portfolio albums images */
-    .gallery-item {
-        flex-basis: 100%; /* Full width for mobile */
-    }
-    .gallery-row {
-        flex-direction: column;
-    }
-
-    .large.portrait, .large.landscape, .small.landscape-stack, .small.portrait-stack {
-        flex-basis: 100%;
-    }
-
-    .small.landscape-stack img, .small.portrait-stack img {
-        margin-bottom: 2px; /* Reduced space for mobile */
-    }
-
-}
 
 /* Add a class for when the menu is active */
 .menu-links.active {
@@ -372,12 +254,13 @@ body, html {
 }
 
 .package {
-    width: 20%; 
-    padding: 10px;
+    width: 100%; 
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* This aligns the price at the bottom */
     height: 100%; /* Ensure each package has the same height */
+    
 }
 .package .content {
     flex: 1; /* This makes the content grow to occupy available space */
@@ -589,4 +472,135 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu-links {
+        display: none;
+        position: fixed; /* Changed from absolute to fixed */
+        top: 60px; /* Adjust this value based on the height of your menu bar */
+        width: 100%; /* Ensure it spans the full width */
+        /*background-color: rgba(209, 121, 39, 0.894);*/
+        background-color:#b7b7a4c0;
+        box-sizing: border-box;
+        padding: 20px; /* Add padding to ensure content isn't touching screen edges */
+        text-align: center;
+    }
+
+    .menu-links a {
+        display: block;
+        margin: 10px 0;
+        /* Ensure text fits comfortably within viewport */
+        font-size: 16px; /* Adjust font size for mobile view */
+    }
+
+    /* These two sections are for the Portrait Page image structure */
+    .row {
+        flex-direction: column;
+    }
+
+    .image-container {
+        width: 100%; /* Full width for smaller screens */
+        padding: 10px 0; /* Adjust padding as needed */
+    }
+
+
+    /* These  sections are for the Packages Page  structure in mobile phones*/
+    .packages {
+        flex-direction: column; /* Stack the .package divs vertically */
+        align-items: center;
+        margin: 5px;
+        flex-wrap: wrap; /* Allows items to wrap onto the next line */
+        padding: 10px;
+
+
+    }
+
+    .package {
+        border-bottom: 2px solid black; /* Black line separator */
+        padding-bottom: 15px; /* Padding above the separator line */
+        width: 100%; /* Let each package take full width */
+        margin: 15px 0; /* Add some vertical margin for separation */
+        padding: 10px; /* Balanced padding inside each package */
+        box-sizing: border-box; /* Include padding and border in the width */
+        display: flex;
+    }
+    .package .content, .package .price {
+        text-align: center; /* Center-align the content for readability */
+    }
+    .package ul {
+        text-align: right;
+        align-items: right;
+        /*padding-left: 5px;  /*Reduced padding for <ul> */
+        /*padding-right: 5px; /* Add this if you need padding on the right as well */
+        padding: 0 10px; /* Adjust padding for list */
+        list-style-position: inside; /* Position bullets inside */
+    }
+
+
+    .package ul li {
+        margin-bottom: 15px; /* Increase space between bullet points */
+        text-align: center; /* Align text to left for better readability */
+    }
+
+    /* Remove the border from the last package to avoid a line at the very bottom */
+    .package:last-child {
+        border-bottom: none;
+    }
+
+    /* Reviews Page */
+    .reviewMain {
+        margin-top: 30px;
+    }   
+    .reviews-header h1, .reviews-header h2, .reviews-header h3 {
+        font-size: 1.5em; /* Adjust font size for headings */
+        
+    }
+
+    .review {
+        margin: 15px 10px; /* Adjust margins for smaller screens */
+        font-size: 1em; /* Adjust font size for review text */
+        padding-top: 20px; /* Adjust this value based on the height of your menu bar */
+    }
+
+    /* Simplify animations on mobile or remove them if they feel too much */
+    .review.left, .review.right {
+        animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+    /* portfolio albums images */
+    .gallery-item {
+        flex-basis: 100%; /* Full width for mobile */
+    }
+    .gallery-row {
+        flex-direction: column;
+    }
+
+    .large.portrait, .large.landscape, .small.landscape-stack, .small.portrait-stack {
+        flex-basis: 100%;
+    }
+
+    .small.landscape-stack img, .small.portrait-stack img {
+        margin-bottom: 2px; /* Reduced space for mobile */
+    }
+
+}
+/* Media Query for desktops */
+@media (min-width: 1024px) {
+    .packages {
+        flex-wrap: nowrap; /* Prevent wrapping on large screens */
+    }
+    .package {
+        width: 25%; /* Original width for large screens */
+    }
 }
