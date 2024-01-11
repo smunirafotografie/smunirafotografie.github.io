@@ -95,20 +95,21 @@ body, html {
 /*Portfolio Page CSS*/
 
 .bodyWebPage{
-   margin-top: 10px;
+   margin-top: 1%;
+   margin-bottom: 2%;
    color: rgb(1, 1, 1);
 
 }
 .portfolio {
     text-align: center;
-    padding: 70px;
+    padding: 50px;
 }
 
 .portfolio-heading {
     font-weight: bold;
     font-size: 2em;
     margin-bottom: 20px;
-    padding: 20px;
+    padding-top: 10px;
     
     
 }
@@ -116,15 +117,17 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
 }
 
 .image-container {
-    width: 50%; /* Adjust as needed */
+    width: 40%; /* Adjust as needed */
+    box-sizing: border-box;
     display: inline-block;
     position: relative;
     cursor: pointer;
     overflow: hidden; /* Ensures the overlay stays within the container */
-    padding: 20px;
+    padding: 2%;
 }
 
 .image-container::before {
@@ -371,6 +374,9 @@ body, html {
     justify-content: space-between;
     margin-bottom: 20px; /* Adjust space between rows */
 }
+.row-new {
+    margin-bottom: 20px; /* Adjust space between rows */
+}
 
 /* We need this section to keep the images inside their respective boxes */
 .gallery-item {
@@ -441,7 +447,8 @@ body, html {
     display: none;
     position: fixed;
     z-index: 1000;
-    padding-top: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     left: 0;
     top: 0;
     width: 100%;
@@ -454,7 +461,7 @@ body, html {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
+    max-width: 600px;
 }
 
 .close {
@@ -468,11 +475,11 @@ body, html {
 }
 
 /* About Section */
-.container {
+.about {
     margin-top: 10%;
     margin-bottom: 10%;
-    width: 80%;
-    margin-left: 5%;
+    width: 85%;
+    margin-left: 8%;
     margin-right: 5% ;
     overflow: hidden;
     
@@ -480,27 +487,32 @@ body, html {
 
 .row {
     display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-.column {
-    padding: 15px;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
 }
 
 .left {
-    flex: 30%; /* Adjust as per requirement */
-    text-align: center;
+    flex-basis: 30%;
+    padding-right: 5%;
 }
 
+.row h2{
+        font-size: 2.5em;
+        font-weight: bold;
+    }
 .right {
-    flex: 70%;
+    flex-basis: 50%;
+    text-align: right;
+    padding-left: 5%;
+}
+
+.text{
+    font-family: 'Didact Gothic', sans-serif;    
 }
 
 img {
     max-width: 100%;
     height: auto;
+    object-fit: cover; /* This will make sure the image covers the whole area without stretching */
 }
 
 
@@ -537,7 +549,7 @@ footer a:hover {
     .menu-links {
         display: none;
         position: fixed; /* Changed from absolute to fixed */
-        top: 60px; /* Adjust this value based on the height of your menu bar */
+        top: 68px; /* Adjust this value based on the height of your menu bar */
         width: 100%; /* Ensure it spans the full width */
         /*background-color: rgba(209, 121, 39, 0.894);*/
         background-color:#b7b7a4c0;
@@ -553,7 +565,7 @@ footer a:hover {
         font-size: 16px; /* Adjust font size for mobile view */
     }
 
-    /* These two sections are for the Portrait Page image structure */
+    /* Portrait Page: These two sections are for the Portrait Page image structure */
     .row {
         flex-direction: column;
     }
@@ -648,11 +660,37 @@ footer a:hover {
 
     /* About Page Mobile View */
 
+    .about {
+        margin-left: 5%;
+        margin-right: 5% ;
+        overflow: hidden;
+    
+}
     .row {
         flex-direction: column;
+        margin-bottom: 10%;
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-left: 5%;
     }
-    .left, .right {
+
+    .left{
+        flex-basis: auto; /* Reset flex-basis for mobile */
+        width: 60%; /* Image width 20% smaller than the text box */
+        margin: 0 auto; /* Center the image */
+        padding-bottom: 10px;
+        align-content: center;
+
+    }
+    .right {
         flex: 100%;
+        text-align: justify;
+        padding-bottom: 5px;
+    }
+    .row h2{
+        font-size: 2em;
+        text-align: center;
+
     }
 
 }
