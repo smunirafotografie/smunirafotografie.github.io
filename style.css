@@ -344,15 +344,27 @@ body, html {
 }
 
 /* Portfolio Albums */
+
+.gallery-heading {
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-top: 45px;
+    padding: 20px;
+    text-align: center;
+    
+}
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-left: 10%;
     margin-right:10%;
-    margin-top: 15%;
+    margin-top: 2%;
     margin-bottom: 15%;
 }
+
+
 
 .gallery .row {
     display: flex;
@@ -454,6 +466,43 @@ body, html {
     font-weight: bold;
     cursor: pointer;
 }
+
+/* About Section */
+.container {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 5% ;
+    overflow: hidden;
+    
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.column {
+    padding: 15px;
+}
+
+.left {
+    flex: 30%; /* Adjust as per requirement */
+    text-align: center;
+}
+
+.right {
+    flex: 70%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 
 /* Footer */
@@ -595,6 +644,15 @@ footer a:hover {
 
     .small.landscape-stack img, .small.portrait-stack img {
         margin-bottom: 2px; /* Reduced space for mobile */
+    }
+
+    /* About Page Mobile View */
+
+    .row {
+        flex-direction: column;
+    }
+    .left, .right {
+        flex: 100%;
     }
 
 }
