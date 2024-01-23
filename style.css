@@ -6,6 +6,9 @@ body, html {
     color:rgb(0, 0, 0);
 }
 
+
+/* MENU */
+
 .menu {
     display: flex;
     justify-content: space-between;
@@ -79,7 +82,10 @@ body, html {
     color:rgb(183, 94, 10)
 }
 
-/*Home Page CSS*/
+
+
+/************************************************************  Home Page CSS  *********************************************************/
+
 .landing-page {
     background-image: url('landingImage.jpg');
     background-size: cover;
@@ -92,7 +98,10 @@ body, html {
     color: white; /* or any color that contrasts with your image */
 }
 
-/*Portfolio Page CSS*/
+
+
+
+/************************************************************    Portfolio Page CSS  ************************************************************/
 
 .bodyWebPage{
    margin-top: 1%;
@@ -168,7 +177,7 @@ body, html {
 
 
 
-/* Let's Meet Page */
+/************************************************************************** Let's Meet Page *********************************************************/
 .contact-form h2 {
     font-family: 'Forum', serif;
     font-weight: bold;
@@ -248,7 +257,7 @@ body, html {
 
 
 
-/* Packages Webpage */
+/****************************************************************   Packages Webpage ***************************************************************/
 
 .packages {
     display: flex;
@@ -305,7 +314,7 @@ body, html {
 
 
 
-/* Reviews Page */
+/********************************************************************** Reviews Page **************************************************************/
 
 .reviewMain {
     padding-top: 30px;
@@ -346,99 +355,78 @@ body, html {
     to {transform: translateX(0); opacity: 1;}
 }
 
-/* Portfolio Albums */
+/************************************************************************* Portfolio Albums ******************************************************/
 
-.gallery-heading {
-    font-weight: bold;
-    font-size: 2em;
-    margin-bottom: 20px;
-    margin-top: 45px;
-    padding: 20px;
-    text-align: center;
-    
+*{
+    box-sizing: border-box;
 }
-.gallery {
+
+.header{
+    text-align: center;
+    padding: 32px;
+}
+.header h1{
+    font-family: 'Forum', serif;
+    font-size: 35px;
+    margin: 2%;
+}
+
+.album-row{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 10%;
-    margin-right:10%;
-    margin-top: 2%;
-    margin-bottom: 15%;
+    padding: 0px 100px 100px 100px;
 }
-
-
-
-.gallery .row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px; /* Adjust space between rows */
+.album-column{
+    flex: 25%;
+    max-width: 25%;
 }
-.row-new {
-    margin-bottom: 20px; /* Adjust space between rows */
-}
-
-/* We need this section to keep the images inside their respective boxes */
-.gallery-item {
-    margin: 5px;
+.gallery-item{
+    height: auto;
     overflow: hidden;
-    position: relative;
-    padding: 10px; /* Padding between images */
+    border: 5px solid rgb(237, 224, 212);
+}
+.gallery-item img{
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* Removed the transition effect */
 }
 
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block; /* Removes bottom space under image */
-    transition: transform 0.3s ease;
+/* Removed the hover effect */
+/*.img-hover-zoom:hover img{
+    transform: scale(1.5);
+}*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, fr);
+  grid-auto-rows: calc((100vw - 5px) / 6);
+  gap: 5px;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.1);
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.portrait {
-    aspect-ratio: 3857 / 6000; /* Maintain aspect ratio */
+.grid-item img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.landscape {
-    aspect-ratio: 5500 / 4000; /* Maintain aspect ratio */
-}
-.big-landscape {
-    width: 100%;
-    height: auto;
+.large-portrait {
+  grid-column: span 3;
+  grid-row: span 4;
 }
 
-.gallery-item.small.portrait {
-    flex: 0 0 28%; /* 28% of the container width */
+.small-landscape {
+  grid-column: span 3;
+  grid-row: span 2;
 }
-
-.gallery-item.large.landscape {
-    flex: 0 0 80%; /* 80% of the container width */
-}
-
-.gallery-item.small.landscape-stack{
-    flex: 0 0 60%; /* 35% of the container width */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Space between the small images */
-
-}
-
-.gallery-item.small.portrait-and-landscape-stack {
-    flex: 0 0 45%; /* 45% of the container width */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Space between the small images */
-}
-
-.small.landscape-stack img,
-.small.portrait-and-landscape-stack img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 5px; /* Space between stacked images */
-}
-
 /* Additional styles for hover effect and modal remain the same */
 
 
@@ -485,7 +473,7 @@ body, html {
     
 }
 
-.row {
+.about-row {
     display: flex;
     flex-wrap: wrap; /* Allows items to wrap to the next line */
 }
@@ -495,7 +483,7 @@ body, html {
     padding-right: 5%;
 }
 
-.row h2{
+.about-row h2{
         font-size: 2.5em;
         font-weight: bold;
     }
@@ -517,7 +505,7 @@ img {
 
 
 
-/* Footer */
+/************************************************************************* Footer **************************************************/
 footer {
     background-color: #6b705c; /* Your specified color */
     color: white; /* Adjust text color as needed */
@@ -540,6 +528,8 @@ footer a:hover {
 }
 
 
+
+/************************************************************************* Mobile Phone CSS **************************************************/
 
 @media screen and (max-width: 768px) {
     .hamburger-menu {
@@ -643,20 +633,11 @@ footer a:hover {
         to {opacity: 1;}
     }
     /* portfolio albums images */
-    .gallery-item {
-        flex-basis: 100%; /* Full width for mobile */
-    }
-    .gallery-row {
-        flex-direction: column;
+    .album-column{
+        flex: 50%;
+        max-width: 50%;
     }
 
-    .large.portrait, .large.landscape, .small.landscape-stack, .small.portrait-stack {
-        flex-basis: 100%;
-    }
-
-    .small.landscape-stack img, .small.portrait-stack img {
-        margin-bottom: 2px; /* Reduced space for mobile */
-    }
 
     /* About Page Mobile View */
 
@@ -666,7 +647,7 @@ footer a:hover {
         overflow: hidden;
     
 }
-    .row {
+    .about-row {
         flex-direction: column;
         margin-bottom: 10%;
         margin-top: 10%;
@@ -687,7 +668,7 @@ footer a:hover {
         text-align: justify;
         padding-bottom: 5px;
     }
-    .row h2{
+    .about-row h2{
         font-size: 2em;
         text-align: center;
 
@@ -703,3 +684,12 @@ footer a:hover {
         width: 22%; /* Original width for large screens */
     }
 }
+
+
+@media screen and (max-width: 500px) {
+    .album-column{
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
