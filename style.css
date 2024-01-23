@@ -367,8 +367,8 @@ body, html {
 }
 .header h1{
     font-family: 'Forum', serif;
-    font-size: 35px;
-    margin: 2%;
+    font-size: 32px;
+    margin-top: 5%;
 }
 
 .album-row{
