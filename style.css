@@ -328,21 +328,24 @@ body, html {
     
 }
 
-.review {
-    opacity: 0; /* Initially hidden */
+.reviews-content {
     margin: 40px;
     font-family: 'Didact Gothic', sans-serif;
     transition: opacity 1s ease-out;
 }
 
-.review.left {
+.review-left {
     animation: slideFromLeft 1s forwards;
     text-align: left;
+    padding-bottom: 20px;
+    margin-left: 5%;
 }
 
-.review.right {
+.review-right {
     animation: slideFromRight 1s forwards;
     text-align: right;
+    padding-bottom: 20px;
+    margin-right: 5%;
 }
 
 @keyframes slideFromLeft {
@@ -617,15 +620,26 @@ footer a:hover {
         
     }
 
-    .review {
-        margin: 15px 10px; /* Adjust margins for smaller screens */
+    .reviews-content {
         font-size: 1em; /* Adjust font size for review text */
         padding-top: 20px; /* Adjust this value based on the height of your menu bar */
+        margin: 2%;
+    
     }
 
     /* Simplify animations on mobile or remove them if they feel too much */
-    .review.left, .review.right {
+    .review-left{
         animation: fadeIn 1s forwards;
+        padding-bottom: 10px;
+        margin-left: 6%;
+        margin-right: 4%;
+
+    } 
+    .review-right {
+        animation: fadeIn 1s forwards;
+        padding-bottom: 10px;
+        margin-right: 6%;
+        margin-left: 4%;
     }
 
     @keyframes fadeIn {
