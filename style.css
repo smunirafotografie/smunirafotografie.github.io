@@ -396,11 +396,6 @@ body, html {
     /* Removed the transition effect */
 }
 
-/* Removed the hover effect */
-/*.img-hover-zoom:hover img{
-    transform: scale(1.5);
-}*/
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(6, fr);
