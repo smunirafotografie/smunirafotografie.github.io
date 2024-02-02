@@ -57,12 +57,25 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //gallery of the portfolio albums
+let currentIndex = 0; // To keep track of the current image
+
 document.querySelectorAll(".gallery-item img").forEach((img) => {
   img.onclick = function () {
     document.getElementById("modalImage").src = this.src;
     document.getElementById("imageModal").style.display = "block";
   };
 });
+
+function changeImage(direction) {
+  const images = document.querySelectorAll(".gallery-item img");
+  currentIndex += direction; // Update index based on arrow direction
+  if (currentIndex >= images.length) {
+    currentIndex = 0; // Loop back to first image if at end
+  } else if (currentIndex < 0) {
+    currentIndex = images.length - 1; // Loop back to last image if at start
+  }
+  document.getElementById("modalImage").src = images[currentIndex].src;
+}
 
 document.querySelector(".close").onclick = function () {
   document.getElementById("imageModal").style.display = "none";
