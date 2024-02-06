@@ -267,17 +267,18 @@ body, html {
 .packages {
     display: flex;
     justify-content: space-around;
-    padding: 60px;
+    padding: 50px;
+    min-height: 650px;
 }
 
 .package {
     width: 100%; 
-    padding: 20px;
+    padding: 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* This aligns the price at the bottom */
     height: 100%; /* Ensure each package has the same height */
-    
+    min-height: 600px;
 }
 .package .content {
     flex: 1; /* This makes the content grow to occupy available space */
@@ -313,7 +314,7 @@ body, html {
 .additional-info {
     text-align: center;
     font-family: 'Didact Gothic', sans-serif;
-    margin-top: 20px;
+    margin-top: none;
     margin-bottom: 120px;
 }
 
@@ -616,7 +617,7 @@ footer a:hover {
     }
 
 
-    /* These  sections are for the Packages Page  structure in mobile phones*/
+    /************************************** These  sections are for the Packages Page  structure in mobile phones*************/
     .packages {
         flex-direction: column; /* Stack the .package divs vertically */
         align-items: center;
@@ -639,8 +640,8 @@ footer a:hover {
         text-align: center; /* Center-align the content for readability */
     }
     .package ul {
-        text-align: right;
-        align-items: right;
+        text-align: left;
+        align-items: left;
         /*padding-left: 5px;  /*Reduced padding for <ul> */
         /*padding-right: 5px; /* Add this if you need padding on the right as well */
         padding: 0 10px; /* Adjust padding for list */
@@ -650,7 +651,7 @@ footer a:hover {
 
     .package ul li {
         margin-bottom: 15px; /* Increase space between bullet points */
-        text-align: center; /* Align text to left for better readability */
+        text-align: left; /* Align text to left for better readability */
     }
 
     /* Remove the border from the last package to avoid a line at the very bottom */
@@ -762,15 +763,7 @@ footer a:hover {
     }
 
 }
-/* Media Query for desktops */
-@media (min-width: 1024px) {
-    .packages {
-        flex-wrap: nowrap; /* Prevent wrapping on large screens */
-    }
-    .package {
-        width: 22%; /* Original width for large screens */
-    }
-}
+
 
 
 @media screen and (max-width: 500px) {
