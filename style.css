@@ -96,8 +96,13 @@ body, html {
     justify-content: center;
     align-items: center;
     color: white; /* or any color that contrasts with your image */
+    padding-top: 20vh; /* Increase the top padding on mobile to position the text higher */
 }
 
+.landing-page h1{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+    font-size: 2.5rem;
+}
 
 
 
@@ -582,6 +587,23 @@ footer a:hover {
         /* Ensure text fits comfortably within viewport */
         font-size: 16px; /* Adjust font size for mobile view */
     }
+
+
+
+    /* *******************************Landing Page */
+    .landing-page {
+        justify-content: flex-start;
+        padding-top: 22vh; /* Increase the top padding on mobile to position the text higher */
+    }
+    .landing-page h1 {
+        margin-top: 0; /* Remove any default margin from the top of the h1 */
+        font-size: 24px; /* Optional: Adjust font size for mobile for better readability */
+    }
+
+
+
+
+
 
     /* Portrait Page: These two sections are for the Portrait Page image structure */
     .row {
