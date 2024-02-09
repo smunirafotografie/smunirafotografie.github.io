@@ -675,14 +675,14 @@ footer a:hover {
     /* Reviews Page */
 
     .reviewMain {
-        margin-top: 18%;
+        margin-top: 20%;
         margin-bottom: 18%;
         
     }   
     .reviews-header {
-        font-size: 1.5em; /* Adjust font size for headings */
+        font-size: 1.8em; /* Adjust font size for headings */
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-bottom: 17px;
     }
 
     .reviews-content {
